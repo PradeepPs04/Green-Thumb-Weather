@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Today</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" class="logo" onclick="reload()">
+                <img src="logo.png" alt="logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <!-- <li class="hover-link nav-item">Home</li> -->
+                    <li class="hover-link nav-item" id="weather" onclick="onNavItemClick('weather')">Weather</li>
+                    <li class="hover-link nav-item" id="market-trends" onclick="onNavItemClick('market-trends')">Market Trends</li>
+                    <li class="hover-link nav-item" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" id="news-input" placeholder="Search for news">
+                <button class="search-btn" id="search-btn">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+        </div>
+
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news" id="news-image">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">Title</h3>
+                <h6 class="news-source" id="news-source">Source and date</h6>
+                <p class="news-description" id="news-description">Lorem, ipsum dolor sit amet consectetur adipisicing
+                    elit. Voluptatum
+                    pariatur fugit modi. Rem, beatae eligendi?</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

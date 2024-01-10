@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumbWeather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="icon" href="asset/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="full-scr-menu"></div>
+    <div id="nav">
+        <div id="nav1">
+            <a href="#">
+                <h2>GreenThumbWeather</h2>
+            </a>
+        </div>
+        <div id="nav2">
+            <a href="#home" class="active">
+                <h4>Home</h4>
+            </a>
+            <a href="#about">
+                <h4>About</h4>
+            </a>
+            <a href="#services">
+                <h4>Services</h4>
+            </a>
+            <!-- <a href="#feedback">
+                <h4>Feedback</h4>
+            </a> -->
+        </div>
+        <div id="menu-bar">
+            <h3>&#9776;Menu</h3>
+        </div>
+    </div>
+
+
+    <div id="cursor"></div>
+    <div id="cursor-blurr"></div>
+
+    <video autoplay loop muted src="asset/field_video.mp4"></video>
+
+    <div id="main">
+
+        <section id="home">
+            <h1>SOW. GROW. HARVEST</h1>
+            <h2>WELCOME TO GREEN THUMB WEATHER!</h2>
+            <p class="para">
+                Your one-stop destination for agricultural prosperity. GreenThumbWeather combines precision
+                forecasting and
+                breaking agricultural news.
+                Explore,
+                plan, and thrive with us!
+            </p>
+        </section>
+
+        <section id="about">
+            <div id="scroller">
+                <div class="scroller-in">
+                    <h4>Weather Forecast</h4>
+                    <h4>Agriculture News</h4>
+                    <!-- <h4>Purchase Goods</h4> -->
+                </div>
+                <div class="scroller-in">
+                    <h4>Weather Forecast</h4>
+                    <h4>Agriculture News</h4>
+                    <!-- <h4>Purchase Goods</h4> -->
+                </div>
+            </div>
+
+
+            <div id="about-us">
+                <!-- <img src="asset/temp/about-us1.jpg" alt="GreenThumbWeather"> -->
+                <img id="about-us-img1" src="asset/about-us1.jpg" alt="GreenThumbWeather">
+
+                <div id="about-us-in">
+                    <h3>ABOUT US</h3>
+                    <p class="para">
+                        Home to an expansive agricultural hub, featuring cutting-edge technology for precision
+                        farming.
+                        Our platform includes weather forecasting, the latest in agricultural news. Catering to all
+                        aspects of farming, we offer a comprehensive experience.
+                        Welcome to a place where innovation meets cultivation!
+                    </p>
+                </div>
+
+                <!-- <img src="asset/temp/about-us2.jpg" alt="GreenThumbWeather"> -->
+                <img id="about-us-img2" src="asset/about-us2.jpg" alt="GreenThumbWeather">
+            </div>
+        </section>
+
+        <section id="services">
+            <h3 id="services-heading">our Services</h3>
+            <div id="cards-container">
+                <div class="card" id="card-1">
+                    <div class="overlay">
+                        <h4>Today's Forecast</h4>
+                        <p class="para">Stay ahead of the weather with real-time forecasts. Plan your planting,
+                            harvesting, and
+                            other
+                            activities with confidence.</p>
+                    </div>
+                    <div class="card-heading">
+                        <a href="#">
+                            <h3>Weather Forecast</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="card" id="card-2">
+                    <div class="overlay">
+                        <h4>Agricultural Insights</h4>
+                        <p class="para">Explore the latest in agricultural news and trends. Stay informed about
+                            industry updates,
+                            innovations, and opportunities.</p>
+                    </div>
+                    <div class="card-heading">
+                        <a href="#">
+                            <h3>Agriculture News</h3>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="card" id="card-3">
+                    <div class="overlay">
+                        <h4>Shop Essentials</h4>
+                        <p class="para">Browse our online shop for a curated selection of top-notch agricultural
+                            products. From
+                            seeds
+                            to
+                            equipment, find everything you need for a successful harvest.</p>
+                    </div>
+                    <div class="card-heading">
+                    <a href="#">
+                        <h3>Purchase Goods</h3>
+                    </a>
+                </div>
+            </div> -->
+            </div>
+
+        </section>
+
+
+        <div id="footer">
+            <p>Copyright&#169;GreenThumbWeather</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

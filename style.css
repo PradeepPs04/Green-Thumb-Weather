@@ -1,0 +1,405 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    /* cursor: none; */
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+*::selection {
+    background-color: #fff;
+    color: #95C11E;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 5px;
+    background: linear-gradient(to left bottom, #000000 20%, #e21b1b 80%);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+    border-radius: 50%;
+}
+
+.para {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#full-scr-menu {
+    height: 60vh;
+    width: 100vw;
+    background-color: #000;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    transition: all ease 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#full-scr-menu a {
+    color: #ecf0f1;
+    font-size: 24px;
+    margin: 15px;
+    text-decoration: none;
+    transition: color 0.3 ease;
+}
+
+#full-scr-menu a:hover {
+    color: #3498db;
+}
+
+#nav {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 150px;
+    gap: 50px;
+    position: fixed;
+    z-index: 100;
+}
+
+#nav1 {
+    width: 40%;
+}
+
+#nav2 {
+    width: 60%;
+}
+
+#nav2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#nav #menu-bar {
+    display: none;
+}
+
+#nav #menu-bar h3 {
+    font-size: 30px;
+}
+
+#nav #nav1 a h2 {
+    font-weight: 800;
+    font-size: 40px;
+}
+
+#nav1 a :hover {
+    cursor: pointer;
+    color: #95C11E;
+}
+
+#nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    transition: all ease-in-out 0.25s;
+}
+
+.heading {
+    font-size: 20px;
+}
+
+#nav h4:hover {
+    color: #95C11E;
+    cursor: pointer;
+}
+
+.active h4{
+    color: #a3d421;
+}
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    pointer-events: none;
+    transition: all linear 0.1s;
+}
+
+#cursor-blurr {
+    height: 400px;
+    width: 400px;
+    background-color: rgba(150, 193, 30, 0.3);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(80px);
+    z-index: 9;
+    pointer-events: none;
+    transition: all linear 0.4s;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+#home {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#home h1 {
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+}
+
+#home h1::before {
+    content: "SOW. GROW. HARVEST";
+    position: absolute;
+    color: #000;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
+}
+
+#home h2 {
+    font-size: 33px;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    width: 40%;
+    line-height: 26px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#about {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 140px;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: 900;
+    margin-right: 10px;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+#scroller h4:hover {
+    color: #95C11E;
+    /* cursor: pointer; */
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+#about-us {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+}
+
+#about-us img {
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#about-us-in {
+    width: 50%;
+    text-align: center;
+}
+
+#about-us-in h3 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+#about-us-in p {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+
+
+#services {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#services #services-heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 54px;
+    font-weight: 800;
+}
+
+#cards-container {
+    height: 60vh;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    height: 80%;
+    width: 24%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    text-wrap: wrap;
+}
+
+.card-heading {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-heading a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    background-color: #000;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+#card-1 {
+    background: url(asset/weater.png);
+}
+
+#card-2 {
+    background: url(asset/news-1.png);
+}
+
+/* #card-3 {
+    background: url(asset/shop.png);
+} */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding: 20px;
+    padding-top: 130px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4 {
+    color: #000;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space: wrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.overlay p {
+    color: #000;
+    font-size: 18px;
+}
+
+
+.card:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+#footer {
+    height: 10vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#footer p {
+    color: #a19f9f;
+    font-family: math;
+}

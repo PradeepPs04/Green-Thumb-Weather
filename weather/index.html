@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumbWeather-Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="phone.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Playpen+Sans:wght@300;400&display=swap"
+        rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <h1>GreenThumbWeather-Forecast</h1>
+    <div id="container-1">
+        <div class="city-input">
+            <input type="text" class="city" placeholder="Enter any city name">
+            <button class="search-btn">Search</button>
+            <div id="seperator"></div>
+            <button class="location-btn">Use current location</button>
+        </div>
+
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2>City name</h2>
+                    <h4>Temperature:</h4>
+                    <h4>Wind: </h4>
+                    <h4>Humidity: </h4>
+                </div>
+
+                <div class="icon">
+                    <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="weather-png">
+                    <h4></h4>
+                </div>
+            </div>
+
+            <div class="days-forecast">
+                <h2>5-Days Forecast</h2>
+                <ul class="forecast-cards">
+                    <li class="card"></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

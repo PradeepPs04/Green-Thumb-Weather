@@ -1,0 +1,75 @@
+@media (max-width: 1830px) {
+    .weather-data .current-weather {
+        padding: 20px;
+    }
+
+    .forecast-cards {
+        flex-wrap: wrap;
+    }
+
+    .forecast-cards .card {
+        width: calc(100% / 4 - 15px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .forecast-cards .card {
+        width: calc(100% / 3 - 15px);
+    }
+}
+
+@media (max-width: 950px) {
+    .city-input {
+        width: 450px;
+    }
+
+    .forecast-cards .card {
+        width: calc(100% / 2 - 10px);
+    }
+}
+
+@media (max-width: 750px) {
+    h1 {
+        font-size: 1.45rem;
+        padding: 16px 0;
+    }
+
+    #container-1 {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .city-input {
+        width: 100%;
+    }
+
+    .weather-data h2 {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .days-forecast h2 {
+        text-align: center;
+    }
+    .forecast-cards {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .forecast-cards .card h3 {
+        font-size: 0.9rem;
+    }
+    .forecast-cards .card h6{
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .forecast-cards h5 {
+        font-size: 0.8rem;
+    }
+    .forecast-cards .card h6 {
+        font-size: 0.6rem;
+    }
+}
