@@ -8,10 +8,17 @@ function reload() {
 }
 
 async function fetchNews(query) {
-    const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    const data = await response.json();
+    try {
+        const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+        if(!response.ok) {
+            throw new Error(`Error: ${response.status} - ${response.statusText}`);
+        }
+        const data = await response.json();
+        bindData(data.articles);
+    } catch(error) {
+        console.error("An error occured while fetching news: ", error);
+    }
     // console.log(data);
-    bindData(data.articles);
 }
 
 function bindData(articles) {
