@@ -7,6 +7,7 @@ function reload() {
     window.location.reload();
 }
 
+
 async function fetchNews(query) {
     try {
         const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
@@ -14,7 +15,12 @@ async function fetchNews(query) {
             throw new Error(`Error: ${response.status} - ${response.statusText}`);
         }
         const data = await response.json();
-        bindData(data.articles);
+        if(data.articles.length == 0) {
+            alert(`No news found for ${query}`);
+        }
+        else {
+            bindData(data.articles);
+        }
     } catch(error) {
         console.error("An error occured while fetching news: ", error);
     }
@@ -69,11 +75,20 @@ const searchBtn = document.getElementById("search-btn");
 const newsInput = document.getElementById("news-input");
 
 searchBtn.addEventListener("click", () => {
+    performSearch();
+});
+
+newsInput.addEventListener("keyup", (event) => {
+    if(event.key == "Enter"){
+        performSearch();
+    }
+});
+
+function performSearch() {
     const query = newsInput.value;
     if(!query)  // if user pressing search without entering text
         return;
     fetchNews(query);
     curSelectedNav?.classList.remove("active");
     curSelectedNav = null;
-});
-
+}
