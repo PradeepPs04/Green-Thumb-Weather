@@ -352,13 +352,13 @@ video {
 }
 
 #card-2 {
-    background: url(asset/news-1.png);
+    background: url(asset/news.png);
     background-size: cover;
     background-position: center;
 }
 
 #card-3 {
-    background: url(asset/temp/search.jpg);
+    background: url(asset/search.jpg);
     background-size: cover;
     background-position: center;
 }
