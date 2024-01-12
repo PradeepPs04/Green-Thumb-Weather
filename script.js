@@ -145,9 +145,13 @@ window.onscroll = () => {
 
 var card1 = document.getElementById('card-1');
 var card2 = document.getElementById('card-2');
+var card3 = document.getElementById('card-3');
 card1.addEventListener('click', function () {
     window.open("weather/index.html", "_blank");
 });
 card2.addEventListener('click', function () {
     window.open("news/index.html", "_blank");
+});
+card3.addEventListener('click', function () {
+    window.open("search/index.html", "_blank");
 });
