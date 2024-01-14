@@ -153,5 +153,5 @@ card2.addEventListener('click', function () {
     window.open("news/index.html", "_blank");
 });
 card3.addEventListener('click', function () {
-    window.open("search/index.html", "_blank");
+    window.open("helper/index.html", "_blank");
 });

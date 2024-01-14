@@ -1,4 +1,4 @@
-const API_KEY = "e1a16de9f81e44da97c08781bdaf4bd3";
+const API_KEY = "e1a16de9f81e44da97c08781bdaf4bd3";  // API key for newsAPI 
 const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", () => fetchNews("Agriculture"));

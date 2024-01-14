@@ -1,3 +1,4 @@
+// selecting HTML elements
 const cityInput = document.querySelector(".city");
 const searchButton = document.querySelector(".search-btn");
 const locationButton = document.querySelector(".location-btn");
@@ -9,8 +10,10 @@ const API_KEY = "6cb4774114c3296b8a1581166e4b1d71"; // API key for OpenWeatherMa
 const createWeatherCard = (cityName, weatherItem, index) => {
     // Function to format a date as "dd/mm/yy"
     const formatDate = (date) => {
+        // day and month will be of 2 digits if only 1 then 0 will be added before
         const day = date.getDate().toString().padStart(2, '0');
         const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        // taking only the last two digits of year
         const year = date.getFullYear().toString().slice(-2);
         return `${day}/${month}/${year}`;
     };
@@ -42,8 +45,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
     fetch(WEATHER_API_URL).then(response => response.json()).then(data => {
-        // this api gives new forecast in every 3 hours
-        //Filter the forecasts to get only one forecast per day
+        // to Include only unique days
         const uniqueForecastDays = [];
         const fiveDaysForecast = data.list.filter(forecast => {
             const forecastDate = new Date(forecast.dt_txt).getDate();
@@ -51,7 +53,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
                 return uniqueForecastDays.push(forecastDate);
             }
         });
-        console.log(data);
+        // console.log(data);
 
         // Clearing previous weather data
         cityInput.value = "";
@@ -73,13 +75,14 @@ const getWeatherDetails = (cityName, lat, lon) => {
 }
 
 const getCityCoordinates = () => {
-    const cityName = cityInput.value.trim();
+    const cityName = cityInput.value.trim();  // trim removes leading and trailing white spaces
     if (cityName === "") return;
     const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
 
     // Get entered city coordinates (latitude, longitude, and name) from the API response
     fetch(API_URL).then(response => response.json()).then(data => {
-        if (!data.length) return alert(`No coordinates found for ${cityName}`);
+        if (data.length === 0)  // when no city found in data then array size/length would be zero
+            return alert(`No coordinates found for ${cityName}`);
         const { lat, lon, name } = data[0];
         getWeatherDetails(name, lat, lon);
     }).catch(() => {
