@@ -5,7 +5,7 @@ const locationButton = document.querySelector(".location-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".forecast-cards");
 
-const API_KEY = "6cb4774114c3296b8a1581166e4b1d71"; // API key for OpenWeatherMap API
+const API_KEY = "7103afcdb017827385ece2020f937bfe"; // API key for OpenWeatherMap API
 
 const createWeatherCard = (cityName, weatherItem, index) => {
     // Function to format a date as "dd/mm/yy"
